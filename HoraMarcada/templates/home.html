@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <script src="https://kit.fontawesome.com/6558a6f744.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hora Marcada</title>
+</head>
+
+<body>
+     <!--Início-->
+    <header>
+        <div class="inicio">
+            <!--Icone do mascote de início da página-->
+
+            <img class="logo" src="{{ url_for('static', filename='img/Logo anhanguera.png') }}" alt="Logo">
+            <div class="Marca">Hora Marcada</div>
+            <!--Foto do úsuario do site -->
+            <div class="usuario" id="userCircle"></div>
+            <input type="file" id="upload" accept="image/*" style="display:none">
+           
+        </div>
+        <div class="linha"></div>
+    </header>
+
+    <main>
+     <!--Laboratórios-->
+        <div class="Lab">Reserva De Salas: Laboratório</div>
+
+<!-- Owl Carousel Container -->
+<div class="owl-carousel owl-theme">
+    <div class="item"><img src="{{ url_for('static', filename='img/sala 01.png') }}" alt="sala01"></div> 
+    <div class="item"><img src="{{ url_for('static', filename='img/Sala 02.png') }}" alt="sala02"></div>
+    <div class="item"><img src="{{ url_for('static', filename='img/Sala 03.png') }}" alt="sala03"></div>
+    <div class="item"><img src="{{ url_for('static', filename='img/sala 04.png') }}" alt="sala04"></div>
+    <div class="item"><img src="{{ url_for('static', filename='img/sala 05.png') }}" alt="sala05"></div>
+    <div class="item"><img src="{{ url_for('static', filename='img/sala 06.png') }}" alt="sala06"></div>
+</div>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $(document).ready(function(){
+        var texts = ["Lab. 1 informática", "Lab. 2 informática", "Lab. 3 informática", "Lab. 4 informática", "Lab. 5 informática", "Lab. 6 informática"];
+        $('.owl-carousel .item').each(function(index){
+            var textDiv = $('<div>' + texts[index] + '</div>');
+            textDiv.css({
+                'position': 'absolute',
+                'bottom': '50%',
+                'left': '50%',
+                'transform': 'translate(-50%, 50%)',
+                'background-color': 'rgba(0, 0, 0, 0.5)',
+                'color': 'white',
+                'padding': '5px',
+                'border-radius': '5px'
+            });
+            $(this).append(textDiv);
+            $(this).css('position', 'relative');
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        });
+
+        // Custom CSS for navigation buttons
+        $('.owl-nav').css({
+            'position': 'absolute',
+            'width': '100%',
+            'top': '50%',
+            'transform': 'translateY(-50%)',
+            'display': 'flex',
+            'justify-content': 'space-between'
+        });
+
+        $('.owl-nav .owl-prev, .owl-nav .owl-next').css({
+            'background-color': 'rgba(0, 0, 0, 0.5)',
+            'color': 'white',
+            'padding': '20px',  // Increased padding for larger size
+            'border-radius': '50%',
+            'font-size': '30px',  // Increased font size for larger arrows
+            'top': '50%',  // Center vertically within the container
+            'transform': 'translateY(-50%)'
+        });
+
+        // Standardize image sizes
+        $('.owl-carousel .item img').css({
+            'width': '100%',
+            'height': 'auto',
+            'max-height': '300px'  // Adjust the max-height as needed
+        });
+
+        // Remove white band
+        $('.owl-carousel .item').css({
+            'background-color': 'transparent'
+        });
+    });
+</script>
+
+
+        <!--Caléndario-->
+
+
+        <section>
+            <div class="TextoCalendario">Escolha o período, e selecione o dia desejado para reservar a sala</div>
+            
+  	<div class="line-parent">
+    		
+    		<img class="Sol" alt="sol" src="{{ url_for('static', filename='img/Sol.png') }}">
+    		
+    		<img src="{{ url_for('static', filename='img/nuvem (1).png') }}" alt="Nuvem" class="Cloud">
+    		
+    		<img class="Lua" alt="lua" src="{{ url_for('static', filename='img/Lua.png') }}">
+
+
+           
+            <div class="linhaVertical02"></div> <!--Linha Vertical N2-->
+            <div class="ÚltimaLinha"></div> <!--última Linha-->
+            <div class="SegundaLinha"></div>
+            <div class="PrimeiraLinha"></div>
+            
+            <!--Linhas Horizontais-->
+            <div class="LinhaHorizontal1"></div>
+            <div class="LinhaHorizontal2"></div>
+            <div class="LinhaHorizontal3"></div>
+            <div class="LinhaHorizontal4"></div>
+            <div class="LinhaHorizontal5"></div>
+
+
+            <div class="Quadrado1" data-dia="22/9" data-periodo="manhã"></div>
+            <div class="Quadrado2" data-dia="21/9" data-periodo="manhã" ></div>
+            <div class="Quadrado3"data-dia="23/9" data-periodo="manhã"></div>
+            <div class="Quadrado4" data-dia="24/9" data-periodo="manhã"></div>
+            <div class="Quadrado5" data-dia="25/9" data-periodo="manhã"></div>
+            <div class="Quadrado6" data-dia="26/9" data-periodo="manhã"></div>
+            <div class="Quadrado7" data-dia="20/9" data-periodo="tarde"></div>
+            <div class="Quadrado8" data-dia="21/9" data-periodo="tarde"></div>
+            <div class="Quadrado9" data-dia="22/9" data-periodo="tarde"></div>
+            <div class="Quadrado10" data-dia="23/9" data-periodo="tarde"></div>
+            <div class="Quadrado11" data-dia="25/9" data-periodo="tarde"></div>
+            <div class="Quadrado12" data-dia="26/9" data-periodo="tarde"></div>
+            <div class="Quadrado13" data-dia="20/9" data-periodo="noite"></div>
+            <div class="Quadrado14" data-dia="21/9" data-periodo="noite"></div>
+            <div class="Quadrado15" data-dia="23/9" data-periodo="noite"></div>
+            <div class="Quadrado16" data-dia="24/9" data-periodo="noite"></div>
+            <div class="Quadrado17" data-dia="25/9" data-periodo="noite"></div>
+            <div class="Quadrado18" data-dia="26/9" data-periodo="noite"></div>
+           
+            
+
+            <!--Dias do caledário -->    		
+            <div class="div"></div>
+    		<div class="div1"></div>
+    		<div class="seg"></div>
+    		<div class="div2"></div>
+    		<div class="div3"></div>
+    		<div class="div4">
+      			<p class="p"></p>
+    		</div>
+    		<div class="div5">
+      			<p class="p"></p>
+    		</div>
+    		<div class="div6"></div>
+            
+    		<div class="group-child1">
+    		</div>
+    		<div class="group-child2">
+    		</div>
+    		<div class="group-child3">
+    		</div>
+    		<div class="group-child4">
+    		</div>
+    		<div class="group-child5">
+    		</div>
+    		<div class="Quadrado19" data-dia="20/9" data-periodo="manhã"">
+    		</div>
+    		<div class="ocupado">Ocupado </div>
+    		<div class="Quadrado21" data-dia="22/9" data-periodo="noite">
+                <div class="confirmado">confirmado</div>
+    		</div>
+    		<div class="Quadrado20 " data-dia="24/9" data-periodo="tarde"">
+    		</div>
+            <div class="quadrado relative"></div>
+
+    		<div class="selecionado"></div>
+      </div>
+      <div class="Setas">
+        <div class="Esquerda" onclick="anteriorDias()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="Direita" onclick="proximoDias()">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+    
+    
+        </section>
+
+
+        <section>
+            <!--Descrevendo as salas-->
+            <div class="TextoDescricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque veritatis maiores laboriosam vero voluptatum? Nobis fuga ipsum facere perspiciatis delectus illum amet voluptas! Odio, odit magni ab minima delectus provident!</div>
+
+             <!--Quadrados com os ícones-->
+             <div class="InformacoesCalendario">
+            <div class="LaranjaDia">
+                <div class="CalendarioDia">20/09</div>
+            </div>
+
+               <!--Quadrados com os ícones-->
+               <div class="LaranjaPeriodo">
+                <div class="Periodo"><img src="{{ url_for('static', filename='img/nuvem (1).png') }}" alt="Nuvem" class="nuvem"></div>
+            </div>
+        </div>
+
+           <!--Botões-->
+           <div class="Botoes">
+           <div class="BotaoConfirmar">Confirmar</div>
+           <div class="BotaoCancelar">Cancelar</div>
+           </div>
+           
+        </section>
+
+    <!--Footer-->
+<footer>
+    <div class="Final">
+        <div class="Rodape">
+            <img class="Logo" src="{{ url_for('static', filename='img/Logo anhanguera.png') }}" alt="Logo">
+            <div class="Info">
+                <div class="Email">
+                    <span class="E-mail">E-mail: </span>
+                    <span>anhaguera@gmail.com</span>
+                </div>
+                <div class="Telefone">
+                    <span class="Contato">Telefone: </span>
+                    <span>(11) 94049-4654</span>
+                </div>
+                <div class="Endereco">
+                    <span class="Local">Endereço:</span>
+                    <span>Av. Braz Leme, 3029 - Santana, São Paulo - SP, 02022-011</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</main>
+
+<h1>Seleções Feitas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuário ID</th>
+                <th>Dia</th>
+                <th>Período</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for selecao in selecoes %}
+            <tr>
+                <td>{{ selecao.id }}</td>
+                <td>{{ selecao.usuario_id }}</td>
+                <td>{{ selecao.dia }}</td>
+                <td>{{ selecao.periodo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+<script src="../static/js/home.js"></script>
+</html>
+

@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    list-style: none;
+    text-decoration: none;
+ 
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px; 
+
+}
+
+/*nossa logo*/
+.logo {
+    width: 7vw;
+    height: 7vw;
+}
+
+/*Hora marcada*/
+.Marca {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/*Foto do usuário*/
+.usuario {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background: #D9D9D9;;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+
+
+/*Linha Do final do header*/
+.linha{
+    width: 84.3rem;
+    height: 3px;
+    background-color: orangered;
+}
+
+.Lab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 1.3vw;
+    font-weight: 400;
+  
+}
+
+/*Carrosel*/
+
+span{
+    color: black;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+/*Voltar Direito*/
+.VoltarDireito {
+    transform: translateY(-50%);
+    background-color: transparent;
+    transform: translateY(-50%) rotate(180deg); 
+}
+
+.VoltarDireito img {
+    width: 2.2vw;
+    height: 2.2vw;
+    filter: invert(100%); /* Torna a imagem branca */
+    cursor: pointer; 
+}
+
+/*Calendário*/
+.TextoCalendario{
+   position: relative;
+   left: 7.3rem;
+   font-weight: 600;
+   font-size: 1.3vw;
+   margin-top: 30px;
+   width: 43%;
+}
+
+.group-item {
+    position: absolute;
+    top: 133.07px;
+    left: 0px;
+    width: 772px;
+    height: 2px;
+    object-fit: contain;
+}
+.group-inner {
+    position: absolute;
+    top: 224px;
+    left: 2.97px;
+    width: 769px;
+    height: 1.5px;
+    object-fit: contain;
+}
+.Sol{
+    position: absolute;
+    top: 67px;
+    left: 25px;
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    z-index: 3;
+}
+.Cloud {
+    position: absolute;
+    top: 153.5px;
+    left: 24px;
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    z-index: 3;
+}
+.Lua {
+    position: absolute;
+    top: 235px;
+    left: 28px;
+    width: 35.8px;
+    height: 39px;
+    object-fit: contain;
+    z-index: 3;
+}
+
+
+.div {
+    position: absolute;
+    top: 18px;
+    left: 105px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    width: 62px;
+    height: 33px;
+    z-index: 2;
+    background-color: transparent;
+}
+.div1 {
+    position: absolute;
+    top: 18px;
+    left: 700px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 62px;
+    height: 33px;
+    background-color: transparent;
+}
+
+.div2 {
+    position: absolute;
+    top: 18px;
+    left: 210px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 62px;
+    height: 33px;
+    color: #000;
+    background-color: transparent;
+    z-index: 2;
+}
+.div3 {
+    position: absolute;
+    top: 18px;
+    left: 305px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 62px;
+    height: 33px;
+    color: #000;
+    background-color: transparent;
+}
+.p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    color: #000;
+    background-color: transparent;
+    left: 100px;
+}
+.div4 {
+    position: absolute;
+    top: 18px;
+    left: 397px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 63px;
+    height: 33px;
+    color: #000;
+    background-color: transparent;
+}
+.div5 {
+    position: absolute;
+    top: 18px;
+    left: 500px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 63px;
+    height: 33px;
+    color: #000;
+    background-color: transparent;
+}
+.div6 {
+    position: absolute;
+    top: 18px;
+    left: 600px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 63px;
+    height: 33px;
+    color: #000;
+    background-color: transparent;
+}
+.group-child1 {
+    position: absolute;
+    top: 8.5px;
+    left: 183.5px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+    z-index: 2;
+}
+
+.group-child2 {
+    position: absolute;
+    top: 8.5px;
+    left: 378.5px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+}
+.group-child3 {
+    position: absolute;
+    top: 8.5px;
+    left: 574.5px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+}
+.group-child4 {
+    position: absolute;
+    top: 8.5px;
+    left: 672.5px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+}
+.group-child5 {
+    position: absolute;
+    top: 8.5px;
+    left: 476.5px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+}
+.Quadrado19 {
+    position: absolute;
+    top: 50.2px;
+    left: 87.4px;
+    border-radius: 10px;
+    background-color: #ff5c5c;
+    width: 96.2px;
+    height: 79px;
+    z-index: 2;
+    cursor: pointer;
+}
+.ocupado {
+    position: absolute;
+    top: 5.2rem;
+    left: 6.7rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Quadrado21 {
+    position: absolute;
+    top: 15.5vw;
+    left: 20.4vw;
+    border-radius: 10px;
+    background-color: #90d81d;
+    width: 100px;
+    height: 82px;
+    cursor: pointer;
+}
+.Quadrado20 {
+    position: absolute;
+    top: 9.5vw;
+    left: 478px;
+    border-radius: 10px;
+    background-color: white;
+    width: 97px;
+    height: 81.4px;
+    cursor: pointer;
+}
+
+.selecionado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+
+
+.confirmado{
+    position: absolute;
+    top: 1.9rem;
+    left: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.line-parent {
+    width: 100%;
+    position: relative;
+    height: 316px;
+    text-align: left;
+    font-size: 12px;
+    color: #000;
+    font-family: Inter;
+    margin-top: 18px;
+    padding: 10px;  
+}
+
+/*Linha vertical 2*/
+.linhaVertical02{
+    width: 100%;
+    position: absolute;
+    left: -78.4vw;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    height: 285px;
+    z-index: 1;
+    }
+
+    .ÚltimaLinha{
+    width: 100%;
+    position: absolute;
+    left: -42.1vw;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    height: 285px;
+    top: 0.7vw;
+    }
+
+    /*Primeira linha vertical*/
+.SegundaLinha{
+    position: absolute;
+    top: 8.5px;
+    left: 86px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+    z-index: 1;
+}
+
+.PrimeiraLinha{
+    position: absolute;
+    top: 8.5px;
+    left: 10px;
+    border-right: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 1px;
+    height: 286.5px;
+    z-index: 1;
+
+}
+
+/*Linhas Horizontais*/
+
+
+.LinhaHorizontal1 {
+    position: absolute;
+    top: 3.6vw; 
+    border-top: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 56.6%;
+    z-index: 1; 
+}
+
+.LinhaHorizontal2 {
+    position: absolute;
+    top: 9.5vw; 
+    border-top: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 56.6%;
+    z-index: 1; 
+}
+
+.LinhaHorizontal3 {
+    position: absolute;
+    top: 15.5vw; 
+    border-top: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 56.6%;
+    z-index: 1; 
+}
+
+
+.LinhaHorizontal4 {
+    position: absolute;
+    top: 21.5vw; 
+    border-top: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 56.6%;
+    z-index: 1; 
+}
+
+/*Primeira linha do calendário*/
+.LinhaHorizontal5{
+    position: absolute;
+    top: 0.6vw; 
+    border-top: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    width: 56.6%;
+    z-index: 1; 
+}
+
+.Quadrado1{
+    position: absolute;
+    top: 3.6vw;
+    left: 278px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 101px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.Quadrado2{
+    position: relative;
+    top: 3vw;
+    left: 11rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 90px;
+    height: 79px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.Quadrado3{
+    position:absolute;
+    top: 3.6vw;
+    left: 23.7rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 98px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.Quadrado4{
+    position: absolute;
+    top: 3.6vw;
+    left: 29.9rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 96.5px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.Quadrado5{
+    position: absolute;
+    top: 3.6vw;
+    left: 36rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 96.5px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.Quadrado6{
+    position: absolute;
+    top: 3.6vw;
+    left: 42.1rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 99px;
+    height: 80px;
+    cursor: pointer;
+}
+
+    .Quadrado7{
+    position: relative;
+    top: 3.1vw;
+    left: 4.8rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 97px;
+    height: 80.3px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+    .Quadrado8{
+    position: relative;
+    top: -2.8vw;
+    left: 10.9rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 93px;
+    height: 80.8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Quadrado9{
+    position: relative;
+    top: -8.8vw;
+    left: 16.7rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 101.5px;
+    height: 80.8px;
+    cursor: pointer;
+}
+
+.Quadrado10{
+    position: relative;
+    top: -14.7vw;
+    left: 23.1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 98px;
+    height: 80.4px;
+    cursor: pointer;
+}
+
+
+.Quadrado11{
+    position: relative;
+    top:-20.5vw;
+    left: 35.4rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 97px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Quadrado12{
+    position: relative;
+    top:-26.5vw;
+    left: 41.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 98.5px;
+    height: 81.8px;
+    cursor: pointer;
+
+}
+
+
+.Quadrado13{
+    position: absolute;
+    top:15.6vw;
+    left: 5.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 97.2px;
+    height: 80.8px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Quadrado14{
+    position: absolute;
+    top:15.6vw;
+    left: 11.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 92.5px;
+    height: 80.5px;
+    cursor: pointer;
+    z-index: 2; 
+}
+
+
+.Quadrado15{
+    position: absolute;
+    top:15.6vw;
+    left: 23.8rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 96px;
+    height: 80.8px;
+    cursor: pointer;
+}
+
+.Quadrado16{
+    position: absolute;
+    top:15.6vw;
+    left: 29.9rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 97px;
+    height: 80.6px;
+    cursor: pointer;
+}
+
+
+.Quadrado17{
+    position: absolute;
+    top:15.6vw;
+    left: 36rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 97px;
+    height: 80.7px;
+    cursor: pointer;
+}
+
+.Quadrado18{
+    position: absolute;
+    top:15.6vw;
+    left: 42.2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 97px;
+    height: 80.5px;
+    cursor: pointer;
+}
+
+.Setas {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 200px; 
+    margin: 10px auto; 
+}
+
+.Setas i {
+    font-size: 23px; 
+    cursor: pointer;
+    position: relative;
+    left:-16.3rem;
+    color: #8a8484;
+    margin-bottom: 10px;
+}
+
+/*Descrevendo as salas*/
+
+.TextoDescricao{
+    position: absolute;
+    width: 38%;
+    height: 16%;
+    right: 0rem;
+    margin-right: 35px;
+    top: 33.5rem;   
+}
+
+.InformacoesCalendario, .Botoes {
+    position: absolute;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;    
+}
+
+.LaranjaDia,
+.LaranjaPeriodo, 
+.BotaoConfirmar, .BotaoCancelar {
+    margin-right: 7.3rem; 
+    border-radius: 10px;
+    background-color:rgb(255, 167, 85); 
+    position: relative;
+    left: 55rem;
+    cursor: pointer;
+}
+
+.LaranjaDia,
+.LaranjaPeriodo{
+    width: 90px;
+    height: 72px;
+    top: -16rem; 
+} 
+
+.CalendarioDia{
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px;
+    background-color: transparent;
+}
+
+    .Periodo {
+        background-color: transparent; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 14px;
+        color: #000; 
+        margin: 10px;
+    }
+
+.nuvem {
+    width: 100%; 
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 55px; /* Limita a largura máxima da imagem */
+    max-height: 55px; /* Limita a altura máxima da imagem */
+    background-color: transparent;
+}
+
+/*Botões*/
+
+.BotaoConfirmar, .BotaoCancelar{
+    width: 90px;;
+    height: 27px;
+    top: -8.8rem; 
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*Footer*/
+
+.Final {
+    position: absolute;
+    width: 100%;
+    height: 18%;
+    background-color: #c9c9c9; 
+}
+
+.Rodape { 
+    position: relative;
+    width: 55%;
+    height: 100%; 
+    background: transparent; 
+    color: #000;
+    font-size: 16px;
+    display: flex; 
+    align-items: center;
+}
+
+.Info {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 20px; 
+}
+
+.E-mail, .Contato, .Local {
+    font-weight: 600;
+}
+
+.Local, .Telefone, .Email, 
+.E-mail, .Endereco, .Local, span {
+    background-color: #c9c9c9; 
+}
+
+.Logo{
+    background: transparent;
+}
+
+
+

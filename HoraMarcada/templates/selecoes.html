@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Seleções</title>
+</head>
+<body>
+    <h1>Seleções Feitas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuário ID</th>
+                <th>Dia</th>
+                <th>Período</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for selecao in selecoes %}
+            <tr>
+                <td>{{ selecao.id }}</td>
+                <td>{{ selecao.usuario_id }}</td>
+                <td>{{ selecao.dia }}</td>
+                <td>{{ selecao.periodo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
