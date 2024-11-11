@@ -14,64 +14,58 @@
 <body>
     <main>
         <div class="login-container" id="login-container">
-         <div class="form-container">
-            
-            <form class="form form-login" method="POST">
-                <h2 class="form-title">Entrar com</h2>
-                <div class="form-social">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
+            <div class="form-container">
+                <form class="form form-login" method="POST" action="/">
+                    <h2 class="form-title">Entrar com</h2>
+                    <div class="form-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                    <p class="form-text">ou utilize sua conta</p>
+                    <div class="form-input-container">
+                        <input type="email" class="form-input" placeholder="email" name="email" required>
+                        <input type="password" class="form-input" placeholder="senha" name="senha" required>
+                    </div>
+                    <a href="/esqueceu_senha" class="form-link">Esqueceu a Senha?</a>
+                    <button type="submit" class="form-button">Entrar</button>
+                </form>
+                <form class="form form-register" method="POST" action="/">
+                    <h2 class="form-title">Criar Conta</h2>
+                    <div class="form-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                    <p class="form-text">ou cadastre seu email aqui</p>
+                    <div class="form-input-container">
+                        <input type="text" class="form-input" placeholder="nome" name="nome" required>
+                        <input type="email" class="form-input" placeholder="email" name="email" required>
+                        <input type="password" class="form-input" placeholder="senha" name="senha" required>
+                    </div>
+                    <button type="submit" class="form-button">Cadastrar</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Bem vindo de volta</h2>
+                    <p class="form-text">Já possui uma conta? Se sim, clique no botão abaixo e faça login</p>
+                    <button class="form-button form-button-light" id="open-login">Entrar</button>
                 </div>
-                <p class="form-text">ou utilize sua conta</p>
-                <div class="form-input-container">
-                    <input type="email" class="form-input" placeholder="email" name="email" required>
-                    <input type="password" class="form-input" placeholder="senha" name="senha" required>              
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Crie Sua Conta</h2>
+                    <p class="form-text">Não possui conta ainda? Clique no botão abaixo e venha conhecer o Hora Marcada</p>
+                    <button class="form-button form-button-light" id="open-register">Cadastre-se</button>
                 </div>
-                <a href="#" class="form-link">Esqueceu a Senha?</a>
-                <button type="submit" class="form-button">Entrar</button>
-            </form>
-            
-
-            <form class="form form-register" method="POST">
-                <h2 class="form-title">Criar Conta</h2>
-                <div class="form-social">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                </div>
-                <p class="form-text">ou cadastre seu email aqui</p>
-                <div class="form-input-container">
-                    <input type="text" class="form-input" placeholder="nome" name="nome" required>
-                    <input type="email" class="form-input" placeholder="email" name="email" required>
-                    <input type="password" class="form-input" placeholder="senha" name="senha" required>
-                </div>
-                <button type="submit" class="form-button">Cadastrar</button>
-            </form>
-            
-
-         </div>
-         <div class="overlay-container">
-          <div class="overlay">
-            <h2 class="form-title form-title-light">Bem vindo de volta </h2>
-            <p class="form-text">Já possui uma conta? Se sim, clique no botão abaixo e faça login</p>
-            <button class="form-button form-button-light" id="open-login">Entrar</button>
-          </div>
-          <div class="overlay">
-            <h2 class="form-title form-title-light">Crie Sua Conta</h2>
-            <p class="form-text">ㅤNão possui conta ainda? Clique no botão abaixo e venha conhecer o Hora Marcada</p>
-            <button class="form-button form-button-light" id="open-register">Cadastre-se</button>
-          </div> 
-          </div> 
-         </div>
+            </div>
         </div>
-        <script src="../static/js/login.js"defer></script>
+        <script src="../static/js/login.js" defer></script>
     </main>
 </body>
 </html>

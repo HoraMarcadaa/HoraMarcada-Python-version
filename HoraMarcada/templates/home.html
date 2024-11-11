@@ -11,17 +11,20 @@
 </head>
 
 <body>
-     <!--Início-->
     <header>
         <div class="inicio">
-            <!--Icone do mascote de início da página-->
-
-            <img class="logo" src="{{ url_for('static', filename='img/Logo anhanguera.png') }}" alt="Logo">
+            <!-- Icone do mascote de início da página -->
+            <img class="logo" src="{{ url_for('static', filename='img/MascoteAOC.png') }}" alt="Logo">
             <div class="Marca">Hora Marcada</div>
-            <!--Foto do úsuario do site -->
+            
+            <!-- Foto do usuário do site -->
             <div class="usuario" id="userCircle"></div>
             <input type="file" id="upload" accept="image/*" style="display:none">
-           
+        
+            <!-- Botão para editar usuário -->
+            <a href="{{ url_for('editusuario') }}">
+                <button type="button" class="editar-perfil">Editar Perfil</button>
+            </a>
         </div>
         <div class="linha"></div>
     </header>
@@ -32,12 +35,36 @@
 
 <!-- Owl Carousel Container -->
 <div class="owl-carousel owl-theme">
-    <div class="item"><img src="{{ url_for('static', filename='img/sala 01.png') }}" alt="sala01"></div> 
-    <div class="item"><img src="{{ url_for('static', filename='img/Sala 02.png') }}" alt="sala02"></div>
-    <div class="item"><img src="{{ url_for('static', filename='img/Sala 03.png') }}" alt="sala03"></div>
-    <div class="item"><img src="{{ url_for('static', filename='img/sala 04.png') }}" alt="sala04"></div>
-    <div class="item"><img src="{{ url_for('static', filename='img/sala 05.png') }}" alt="sala05"></div>
-    <div class="item"><img src="{{ url_for('static', filename='img/sala 06.png') }}" alt="sala06"></div>
+    <div class="item">
+        <a href="{{ url_for('lab1') }}">
+            <img src="{{ url_for('static', filename='img/sala 01.png') }}" alt="sala01">
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('lab2') }}">
+            <img src="{{ url_for('static', filename='img/Sala 02.png') }}" alt="sala02">
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('lab3') }}">
+            <img src="{{ url_for('static', filename='img/Sala 03.png') }}" alt="sala03">
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('lab4') }}">
+            <img src="{{ url_for('static', filename='img/sala 04.png') }}" alt="sala04">
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('lab5') }}">
+            <img src="{{ url_for('static', filename='img/sala 05.png') }}" alt="sala05">
+        </a>
+    </div>
+    <div class="item">
+        <a href="{{ url_for('lab6') }}">
+            <img src="{{ url_for('static', filename='img/sala 06.png') }}" alt="sala06">
+        </a>
+    </div>
 </div>
 
 <!-- jQuery -->
@@ -218,7 +245,7 @@
 
         <section>
             <!--Descrevendo as salas-->
-            <div class="TextoDescricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque veritatis maiores laboriosam vero voluptatum? Nobis fuga ipsum facere perspiciatis delectus illum amet voluptas! Odio, odit magni ab minima delectus provident!</div>
+            <div class="TextoDescricao">Selecione um dos quadrados no calendario para conseguir agendar uma sala. Para marcar o agendamento em um laboratorio em especifico escolha qual deles vai reservar uma aula, clicando em uma das imagens acima</div>
 
              <!--Quadrados com os ícones-->
              <div class="InformacoesCalendario">
@@ -244,7 +271,7 @@
 <footer>
     <div class="Final">
         <div class="Rodape">
-            <img class="Logo" src="{{ url_for('static', filename='img/Logo anhanguera.png') }}" alt="Logo">
+            <img class="Logo" src="{{ url_for('static', filename='img/Logo.anhanguera.png') }}" alt="Logo">
             <div class="Info">
                 <div class="Email">
                     <span class="E-mail">E-mail: </span>

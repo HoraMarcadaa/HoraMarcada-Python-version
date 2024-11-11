@@ -27,12 +27,10 @@
 /*Hora marcada*/
 .Marca {
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: center;
     margin-left: 240px;
 }
-
-
 
 /*Linha Do final do header*/
 .linha{
@@ -50,28 +48,6 @@
     font-size: 1.3vw;
     font-weight: 400;
   
-}
-
-/*Carrosel*/
-
-span{
-    color: black;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-}
-
-/*Voltar Direito*/
-.VoltarDireito {
-    transform: translateY(-50%);
-    background-color: transparent;
-    transform: translateY(-50%) rotate(180deg); 
-}
-
-.VoltarDireito img {
-    width: 2.2vw;
-    height: 2.2vw;
-    filter: invert(100%); /* Torna a imagem branca */
-    cursor: pointer; 
 }
 
 /*Calendário*/
@@ -673,13 +649,14 @@ span{
 
 /*Descrevendo as salas*/
 
-.TextoDescricao{
-    position: absolute;
-    width: 38%;
-    height: 16%;
-    right: 0rem;
-    margin-right: 35px;
-    top: 33.5rem;   
+.description {
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1em;
+    text-align: left;
+    margin-left: 800px;
+    transform: translateY(-325px);
 }
 
 .InformacoesCalendario, .Botoes {
@@ -698,6 +675,7 @@ span{
     position: relative;
     left: 55rem;
     cursor: pointer;
+    transform: translateY(-60px)
 }
 
 .LaranjaDia,
@@ -814,6 +792,3 @@ span{
         padding: 8px 16px;
     }
 }
-
-
-

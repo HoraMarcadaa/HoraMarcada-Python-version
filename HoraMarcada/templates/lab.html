@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lab.css') }}">
+</head>
+<body>
+    <header>
+        <div class="inicio">
+            <!-- Icone do mascote de início da página -->
+            <img class="logo" src="{{ url_for('static', filename='img/MascoteAOC.png') }}" alt="Logo">
+            <div class="Marca"><h1>{{ nome }}</h1></div>
+            
+            <!-- Foto do usuário do site -->
+            <div class="usuario" id="userCircle"></div>
+            <input type="file" id="upload" accept="image/*" style="display:none">
+        
+            <!-- Botão para editar usuário -->
+            <a href="{{ url_for('editusuario') }}">
+                <button type="button" class="editar-perfil">Editar Perfil</button>
+            </a>
+        </div>
+        <div class="linha"></div>
+    </header>
+
+        <!--Caléndario-->
+
+        <section>
+            <div class="TextoCalendario">Escolha o período, e selecione o dia desejado para reservar a sala</div>
+            
+    <div class="line-parent">
+            
+            <img class="Sol" alt="sol" src="{{ url_for('static', filename='img/Sol.png') }}">
+            
+            <img src="{{ url_for('static', filename='img/nuvem (1).png') }}" alt="Nuvem" class="Cloud">
+            
+            <img class="Lua" alt="lua" src="{{ url_for('static', filename='img/Lua.png') }}">
+
+           
+            <div class="linhaVertical02"></div> <!--Linha Vertical N2-->
+            <div class="ÚltimaLinha"></div> <!--última Linha-->
+            <div class="SegundaLinha"></div>
+            <div class="PrimeiraLinha"></div>
+            
+            <!--Linhas Horizontais-->
+            <div class="LinhaHorizontal1"></div>
+            <div class="LinhaHorizontal2"></div>
+            <div class="LinhaHorizontal3"></div>
+            <div class="LinhaHorizontal4"></div>
+            <div class="LinhaHorizontal5"></div>
+
+            <div class="Quadrado1" data-dia="22/9" data-periodo="manhã"></div>
+            <div class="Quadrado2" data-dia="21/9" data-periodo="manhã" ></div>
+            <div class="Quadrado3"data-dia="23/9" data-periodo="manhã"></div>
+            <div class="Quadrado4" data-dia="24/9" data-periodo="manhã"></div>
+            <div class="Quadrado5" data-dia="25/9" data-periodo="manhã"></div>
+            <div class="Quadrado6" data-dia="26/9" data-periodo="manhã"></div>
+            <div class="Quadrado7" data-dia="20/9" data-periodo="tarde"></div>
+            <div class="Quadrado8" data-dia="21/9" data-periodo="tarde"></div>
+            <div class="Quadrado9" data-dia="22/9" data-periodo="tarde"></div>
+            <div class="Quadrado10" data-dia="23/9" data-periodo="tarde"></div>
+            <div class="Quadrado11" data-dia="25/9" data-periodo="tarde"></div>
+            <div class="Quadrado12" data-dia="26/9" data-periodo="tarde"></div>
+            <div class="Quadrado13" data-dia="20/9" data-periodo="noite"></div>
+            <div class="Quadrado14" data-dia="21/9" data-periodo="noite"></div>
+            <div class="Quadrado15" data-dia="23/9" data-periodo="noite"></div>
+            <div class="Quadrado16" data-dia="24/9" data-periodo="noite"></div>
+            <div class="Quadrado17" data-dia="25/9" data-periodo="noite"></div>
+            <div class="Quadrado18" data-dia="26/9" data-periodo="noite"></div>
+           
+            
+            <!--Dias do caledário -->           
+            <div class="div"></div>
+            <div class="div1"></div>
+            <div class="seg"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="div4">
+                <p class="p"></p>
+            </div>
+            <div class="div5">
+                <p class="p"></p>
+            </div>
+            <div class="div6"></div>
+            
+            <div class="group-child1">
+            </div>
+            <div class="group-child2">
+            </div>
+            <div class="group-child3">
+            </div>
+            <div class="group-child4">
+            </div>
+            <div class="group-child5">
+            </div>
+            <div class="Quadrado19" data-dia="20/9" data-periodo="manhã"">
+            </div>
+            <div class="ocupado">Ocupado </div>
+            <div class="Quadrado21" data-dia="22/9" data-periodo="noite">
+                <div class="confirmado">confirmado</div>
+            </div>
+            <div class="Quadrado20 " data-dia="24/9" data-periodo="tarde"">
+            </div>
+            <div class="quadrado relative"></div>
+            <div class="selecionado"></div>
+      </div>
+      <div class="Setas">
+        <div class="Esquerda" onclick="anteriorDias()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="Direita" onclick="proximoDias()">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+    
+    
+        </section>
+
+        <section>
+
+            <!--Descrevendo as salas-->
+            <body>
+                <div class="container">
+                    <header class="header">
+                    </header>
+                    <main class="main-content">
+                        <section class="description">
+                            <p>{{ descricao }}</p>
+                            <div class="details">
+                                <p><strong>Capacidade:</strong> {{ capacidade }}</p>
+                                <p><strong>Computadores:</strong> {{ computadores }}</p>
+                            </section>
+                        </main>
+                    </div>
+                    
+             <!--Quadrados com os ícones-->
+             <div class="InformacoesCalendario">
+            <div class="LaranjaDia">
+                <div class="CalendarioDia">20/09</div>
+            </div>
+               <!--Quadrados com os ícones-->
+               <div class="LaranjaPeriodo">
+                <div class="Periodo"><img src="{{ url_for('static', filename='img/nuvem (1).png') }}" alt="Nuvem" class="nuvem"></div>
+            </div>
+        </div>
+           <!--Botões-->
+           <div class="Botoes">
+           <div class="BotaoConfirmar">Confirmar</div>
+           <div class="BotaoCancelar">Cancelar</div>
+           </div>
+           
+        </section>
+    <!--Footer-->
+<footer>
+    <div class="Final">
+        <div class="Rodape">
+            <img class="Logo" src="{{ url_for('static', filename='img/Logo.anhanguera.png') }}" alt="Logo">
+            <div class="Info">
+                <div class="Email">
+                    <span class="E-mail">E-mail: </span>
+                    <span>anhaguera@gmail.com</span>
+                </div>
+                <div class="Telefone">
+                    <span class="Contato">Telefone: </span>
+                    <span>(11) 94049-4654</span>
+                </div>
+                <div class="Endereco">
+                    <span class="Local">Endereço:</span>
+                    <span>Av. Braz Leme, 3029 - Santana, São Paulo - SP, 02022-011</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</main>
+<h1>Seleções Feitas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuário ID</th>
+                <th>Dia</th>
+                <th>Período</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for selecao in selecoes %}
+            <tr>
+                <td>{{ selecao.id }}</td>
+                <td>{{ selecao.usuario_id }}</td>
+                <td>{{ selecao.dia }}</td>
+                <td>{{ selecao.periodo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script src="../static/js/home.js"></script>
+</html>

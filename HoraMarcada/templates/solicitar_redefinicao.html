@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueceu sua Senha?</title>
+    <link rel="stylesheet" href="../static/css/senha.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Esqueceu sua senha?</h1>
+        <form action="{{ url_for('solicitar_redefinicao') }}" method="POST">
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+            <button type="submit">Enviar Código</button>
+        </form>
+    </div>
+</body>
+</html>

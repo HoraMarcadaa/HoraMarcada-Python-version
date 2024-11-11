@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="../static/css/senha.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Esqueceu sua senha?</h1>
+        <p>Digite o seu e-mail cadastrado para redefinir a senha</p>
+        <form action="{{ url_for('esqueceu_senha') }}" method="POST">
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+            <button type="submit">Enviar e-mail de redefinição</button>
+        </form>
+        <a href="{{ url_for('index') }}">Voltar ao login</a>
+    </div>
+</body>
+</html>
+    
